@@ -1,0 +1,98 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   -->
+    <script src="{% static 'scripts/script.js' %}"></script>
+    <title>Chaney Wealth Management</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Raleway" rel="stylesheet"> 
+</head>
+<body>
+    <header id="headerID"><a href="#top">
+        <img src="{% static 'assets/Logo_CWM.svg' %}" alt="" id="logo">
+        </a>
+
+    <nav id="headerNav">
+        <ul id="nav-links" class="topnav">
+            <li class="iconMenu"><img src="images/3bars.svg"></li> <!--javascript:void(0);"  onclick="toggleMenu()-->
+            <a href="#"><li class="nav-link">Home</li></a>
+            <a href="#services"><li class="nav-link">Services</li></a>
+            <a href="#aboutus"><li class="nav-link">About Us</li></a>
+            <a href="#contact"><li class="nav-link">Contact</li></a>
+            
+            
+        </ul>
+
+    </nav>
+    </header>
+
+    <!-- <section class="parallax"></section> -->
+    <section class="parallax" style="
+    background-image: url('{% static 'assets/CBUS_Skyline_night.jpeg' %}')"></section>
+    <section id="who">
+        <h2>Customized plans for your unique needs</h2>
+            <p>Chaney Wealth Management is an independently owned investment advisory firm focused on helping you achieve your definition of financial success. 
+            Whether you are facing retirement or looking to better understand certain investment ideas, 
+            we can help you address all your money questions.</p>
+    </section>
+    <section id="services">
+        <h2>Services</h2>
+        <h3>Our team helps in all areas of managing your wealth</h3>
+        <ul>
+            <li>Retirement planning</li>
+            <li>Education planning</li>
+            <li>Cash flow management</li>
+            <li>Tax planning</li>
+            <li>Estate planning</li>
+            <li>Insurance reviews</li>
+
+        </ul>
+    </section>
+    <section id="aboutus">
+        <h2>About Us</h2>
+        <div class="about_flex"><img src="{% static 'assets/JoelDesk_web_crop.jpeg' %}" alt="Joel at work">
+        <div>
+        <p>As an independent LPL financial advisor,
+            I believe success should be measured not just by your financial well-being,
+            but by how confident you feel about your future.
+            My mission is to help you pursue your financial goals through a personal relationship
+            based on personalized, knowledgeable advice.</p>
+            <p>
+                My mission is to get to know and understand your needs, wants and long-term goals. 
+                I want to help you develop, implement and monitor a strategy that is designed
+                to address your individual situation.
+            </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue ut lectus arcu bibendum at varius vel pharetra. Cras semper auctor neque vitae.</p>
+    </section>
+    <footer id="footer">
+        <div id="legalese">
+            <p>Check the background of your financial professional on FINRA's <a href="http://brokercheck.finra.org/">BrokerCheck</a>. 
+                Securities offered through LPL Financial, member FINRA/SIPC. 
+                Investment advice offered through Chaney Wealth Management, 
+                a registered investment advisor and separate entity from LPL Financial. 
+                The LPL Financial Registered Representatives associated with this site may 
+                only discuss and/or transact securities business with residents of the following states 
+                (IN, FL, OH, PA, SC)</p>
+        </div>
+        <div id="contactdiv">
+            <ul>
+                <a href="https://www.google.com/maps/search/?api=1&query=7530+Slate+Ridge+Blvd+Reynoldsburg+OH+43068">
+                <li>7530 Slate Ridge Blvd</li>
+                <li>Reynoldsburg, OH 43068</li></a>
+                <li>Office: <a href="tel:(614) 868-3900">(614) 868-3900</a></li>
+                <li><a href="mailto:joel.chaney@lpl.com">joel.chaney@lpl.com</a></li>
+
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
