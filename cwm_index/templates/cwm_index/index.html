@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block head %}
+    {% endblock %}
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   -->
     <script src="{% static 'scripts/script.js' %}"></script>
     <title>Chaney Wealth Management</title>
@@ -36,11 +38,11 @@
         <h2>Customized plans for your unique needs</h2>
             <p>Chaney Wealth Management is an independently owned investment advisory firm focused on helping you achieve your definition of financial success. 
             Whether you are facing retirement or looking to better understand certain investment ideas, 
-            we can help you address all your money questions.</p>
+            we will help you address all your money questions.</p>
     </section>
     <section id="services">
         <h2>Services</h2>
-        <h3>Our team helps in all areas of managing your wealth</h3>
+        <h3>We help in all areas of managing your wealth</h3>
         <ul>
             <li>Retirement planning</li>
             <li>Education planning</li>
@@ -69,8 +71,9 @@
         </div>
     </section>
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue ut lectus arcu bibendum at varius vel pharetra. Cras semper auctor neque vitae.</p>
+        <div>
+            {% include "cwm_index/email.html"  %}
+        </div>
     </section>
     <footer id="footer">
         <div id="legalese">

@@ -1,0 +1,18 @@
+<!-- sendemail/templates/email.html -->
+<h2>Get in touch</h2>
+<div class="form-wrap">
+<div class="form-call">
+  <p>Your financial success is our first priority.</p>
+  <p>If you have questions about our services or just want to know how we can help you, 
+    send us a note and 
+    we'll get back to you quickly with a thoughtful answer.</p>
+</div>
+<form method="post" class="contactform">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit" class="btn">Send</button>
+      <button type="reset" class="btn">Clear</button>
+    </div>
+</form>
+</div>

@@ -92,6 +92,42 @@ footer ul{
 #contactdiv{
     grid-area: contact;
 }
+.form-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-wrap label{
+    display: none;
+}
+.form-call{
+    flex: 1 1 300px;
+    margin: 0 30px 0 0;
+}
+.contactform{
+    flex: 2 1 400px;
+}
+.contactform textarea{
+    height: 100px;
+}
+.contactform input, .contactform textarea{
+    font-family: 'Raleway', serif;
+    width: 100%;
+    /* line-height: 2em; */
+    border:none;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    /* margin: 10px 0px; */
+    background-color: transparent;
+}
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    padding: 10px;
+    text-decoration: none;
+    border:none;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
 
 ul {
     list-style-type: none;
