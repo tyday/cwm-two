@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.decorators import login_required
-
+from cwm.settings import BASE_DIR
 # Create your views here.
 @login_required
 def index(request):
@@ -34,5 +34,7 @@ def index(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('index')
-    
-    return render(request,'cwm_index/index.html',{'form':form})
+    spam = BASE_DIR
+    jam = spam+'/static/'
+    return HttpResponse(spam+jam)
+    # return render(request,'cwm_index/index.html',{'form':form})
