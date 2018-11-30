@@ -2,8 +2,14 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
+@login_required
 def index(request):
+    # if not request.user.is_authenticated:
+    #     return redirect('login')
+        # return HttpResponse('<h1>Page not found</h1>')
     if request.method == 'GET':
         form = ContactForm()
     else:
@@ -20,8 +26,11 @@ def index(request):
                         {message}"""
             # message = "this is a message\r\nnewline \r\n other new line"
             print(message)
+            subject = 'chaneywealthmgmt: contact message'
+            from_email = 'admin@tylerday.net'
+            to_email = ['tyrday@gmail.com','tyrday@live.com','tyrolia@habernashing.com']
             try:
-                send_mail('chaneywealthmgmt: contact message', message, 'admin@chaneywealthmgmt.com', ['tyrday@gmail.com'])
+                send_mail(subject, message, from_email, to_email)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('index')
